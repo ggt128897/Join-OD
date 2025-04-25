@@ -3,66 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OWNDAYS 宜蘭金東店 快速接待入口</title>
-  <link rel="icon" href="https://www.owndays.com/favicon.ico" />
-  <meta property="og:title" content="OWNDAYS 宜蘭金東店 快速接待入口" />
-  <meta property="og:description" content="歡迎您預先填寫資料，加速門市接待流程。" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1562003389-f0b8a5c5b5d2" />
-  <meta property="og:type" content="website" />
+  <title>OWNDAYS 會員加速辦理</title>
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
-      background: #f5f5f5;
+      background: #eef2f3;
       margin: 0;
       padding: 0;
       text-align: center;
       color: #333;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1562003389-f0b8a5c5b5d2') center/cover no-repeat;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: #1e88e5;
       color: white;
+      padding: 20px;
       font-size: 1.8rem;
-      font-weight: bold;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
     .container {
-      margin-top: 30px;
-      padding: 0 20px;
+      margin: 40px 20px;
+    }
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      width: 90%;
+      max-width: 300px;
+      margin: 10px 0;
     }
     .btn {
       background-color: #1e88e5;
       color: white;
       border: none;
-      padding: 15px 30px;
+      padding: 12px 24px;
       font-size: 1.2rem;
       border-radius: 8px;
       cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.3s;
+      margin-top: 20px;
     }
     .btn:hover {
       background-color: #1565c0;
     }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #888;
-    }
   </style>
 </head>
 <body>
-  <header>OWNDAYS 宜蘭金東店 快速接待入口</header>
+  <header>OWNDAYS 會員加速辦理</header>
   <div class="container">
-    <p>歡迎您預先填寫資料，加速門市接待流程：</p>
-    <a class="btn" href="https://www.owndays.com/tw/zh_tw/reception?store=1019" target="_blank">前往填寫表單</a>
+    <p>填寫以下欄位後，將自動跳轉至接待表單</p>
+    <input type="text" id="name" placeholder="請輸入姓名" />
+    <br />
+    <input type="tel" id="phone" placeholder="請輸入手機號碼" />
+    <br />
+    <button class="btn" onclick="goToForm()">前往接待表單</button>
   </div>
-  <footer>
-    OWNDAYS 宜蘭金東店<br>感謝您的配合與支持
-  </footer>
+
+  <script>
+    function goToForm() {
+      const name = encodeURIComponent(document.getElementById("name").value);
+      const phone = encodeURIComponent(document.getElementById("phone").value);
+      // 若 OWNDAYS 表單有支援 query string，可改為拼接：
+      // const url = `https://www.owndays.com/tw/zh_tw/reception?store=1019&name=${name}&phone=${phone}`;
+      const url = "https://www.owndays.com/tw/zh_tw/reception?store=1019";
+      window.open(url, "_blank");
+    }
+  </script>
 </body>
 </html>
