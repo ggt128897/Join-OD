@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>自動加入 OWNDAYS LINE 好友</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加入 OWNDAYS 好友並快速接待</title>
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
       text-align: center;
       padding: 60px 20px;
-    }
-    h1 {
-      color: #1e88e5;
+      font-family: sans-serif;
     }
     .btn {
-      display: inline-block;
-      padding: 12px 24px;
+      padding: 14px 28px;
       background-color: #00c300;
-      color: #fff;
+      color: white;
+      border: none;
       border-radius: 8px;
-      font-size: 1.2rem;
+      font-size: 18px;
       text-decoration: none;
+      display: inline-block;
       margin-top: 20px;
     }
   </style>
   <script>
-    window.onload = function() {
-      // 自動跳轉至 LINE 加好友頁面
-      setTimeout(function() {
-        window.location.href = "https://line.me/R/ti/p/@owndays_tw";
-      }, 1500); // 延遲 1.5 秒跳轉
+    window.onload = function () {
+      // 嘗試開啟 LINE App 加好友
+      window.location.href = "line://ti/p/@owndays_tw";
+
+      // 2 秒後自動導向 OWNDAYS 表單頁
+      setTimeout(function () {
+        window.location.href = "https://www.owndays.com/tw/zh_tw/reception?store=1019";
+      }, 2000);
     };
   </script>
 </head>
 <body>
-  <h1>即將為您開啟 LINE 加入 OWNDAYS 好友</h1>
-  <p>若未自動跳轉，請點擊下方按鈕</p>
-  <a class="btn" href="https://line.me/R/ti/p/@owndays_tw" target="_blank">點我加入好友</a>
+  <h1>加入 OWNDAYS LINE 好友中...</h1>
+  <p>若未自動跳轉，請手動操作以下按鈕：</p>
+  <a class="btn" href="line://ti/p/@owndays_tw">加入 OWNDAYS 好友</a><br><br>
+  <a class="btn" href="https://www.owndays.com/tw/zh_tw/reception?store=1019" style="background-color: #1e88e5;">前往接待頁面</a>
 </body>
 </html>
