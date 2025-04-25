@@ -2,68 +2,49 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OWNDAYS 會員加速辦理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OWNDAYS 會員快速接待</title>
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
-      background: #eef2f3;
-      margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
       text-align: center;
+      padding: 20px;
       color: #333;
     }
-    header {
-      background: #1e88e5;
-      color: white;
-      padding: 20px;
-      font-size: 1.8rem;
-    }
-    .container {
-      margin: 40px 20px;
-    }
-    input {
-      padding: 10px;
-      font-size: 1rem;
-      width: 90%;
-      max-width: 300px;
-      margin: 10px 0;
+    h1 {
+      color: #1e88e5;
     }
     .btn {
-      background-color: #1e88e5;
+      background-color: #00c300;
       color: white;
-      border: none;
-      padding: 12px 24px;
+      padding: 15px 30px;
       font-size: 1.2rem;
+      border: none;
       border-radius: 8px;
+      margin: 15px;
+      display: inline-block;
       cursor: pointer;
-      margin-top: 20px;
+      text-decoration: none;
     }
-    .btn:hover {
-      background-color: #1565c0;
+    .btn.owndays {
+      background-color: #1e88e5;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <header>OWNDAYS 會員加速辦理</header>
-  <div class="container">
-    <p>填寫以下欄位後，將自動跳轉至接待表單</p>
-    <input type="text" id="name" placeholder="請輸入姓名" />
-    <br />
-    <input type="tel" id="phone" placeholder="請輸入手機號碼" />
-    <br />
-    <button class="btn" onclick="goToForm()">前往接待表單</button>
-  </div>
+  <h1>OWNDAYS 快速接待</h1>
+  <p>步驟一：加入官方 Line 會員</p>
+  <a class="btn" href="https://line.me/R/ti/p/@owndays_tw" target="_blank">加入 Line 會員</a>
 
-  <script>
-    function goToForm() {
-      const name = encodeURIComponent(document.getElementById("name").value);
-      const phone = encodeURIComponent(document.getElementById("phone").value);
-      // 若 OWNDAYS 表單有支援 query string，可改為拼接：
-      // const url = `https://www.owndays.com/tw/zh_tw/reception?store=1019&name=${name}&phone=${phone}`;
-      const url = "https://www.owndays.com/tw/zh_tw/reception?store=1019";
-      window.open(url, "_blank");
-    }
-  </script>
+  <p>步驟二：填寫接待表單</p>
+  <a class="btn owndays" href="https://www.owndays.com/tw/zh_tw/reception?store=1019" target="_blank">開始填寫表單</a>
+
+  <p class="note">完成兩步驟，即可享快速接待與會員服務</p>
 </body>
 </html>
