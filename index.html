@@ -2,49 +2,48 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OWNDAYS 會員快速接待</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OWNDAYS 快速加入會員</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
+      font-family: "Segoe UI", sans-serif;
+      background: #f5f5f5;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
       color: #333;
     }
     h1 {
       color: #1e88e5;
     }
     .btn {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 15px 30px;
       background-color: #00c300;
       color: white;
-      padding: 15px 30px;
       font-size: 1.2rem;
-      border: none;
       border-radius: 8px;
-      margin: 15px;
-      display: inline-block;
-      cursor: pointer;
       text-decoration: none;
     }
-    .btn.owndays {
-      background-color: #1e88e5;
-    }
     .note {
-      font-size: 0.9rem;
-      color: #777;
+      font-size: 0.95rem;
+      color: #666;
       margin-top: 20px;
     }
   </style>
+  <script>
+    // 自動開啟 LINE 加入好友
+    window.onload = function() {
+      setTimeout(function() {
+        window.location.href = "https://line.me/R/ti/p/@owndays_tw";
+      }, 1500);
+    };
+  </script>
 </head>
 <body>
-  <h1>OWNDAYS 快速接待</h1>
-  <p>步驟一：加入官方 Line 會員</p>
-  <a class="btn" href="https://line.me/R/ti/p/@owndays_tw" target="_blank">加入 Line 會員</a>
-
-  <p>步驟二：填寫接待表單</p>
-  <a class="btn owndays" href="https://www.owndays.com/tw/zh_tw/reception?store=1019" target="_blank">開始填寫表單</a>
-
-  <p class="note">完成兩步驟，即可享快速接待與會員服務</p>
+  <h1>歡迎使用 OWNDAYS 快速接待系統</h1>
+  <p>系統將為您自動開啟 LINE 加入會員</p>
+  <a class="btn" href="https://line.me/R/ti/p/@owndays_tw" target="_blank">若未自動跳轉請點此</a>
+  <p class="note">加入會員後請依照 LINE 訊息，點擊進入接待填寫表單頁面</p>
 </body>
 </html>
